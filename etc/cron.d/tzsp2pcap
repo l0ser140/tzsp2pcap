@@ -1,0 +1,2 @@
+#Delete files in /tcpdumps/ older than 30days
+0 0 * * * root /bin/find /tcpdumps/ -mtime +30 -type f -delete
