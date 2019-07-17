@@ -1,6 +1,6 @@
 # Configurable variables
 TARGET = tzsp2pcap
-CFLAGS += -std=c99 -D_DEFAULT_SOURCE -Wall -Wextra -pedantic -O2 -g
+CFLAGS += -std=c99 -D_GNU_SOURCE -Wall -Wextra -pedantic -O2 -g
 LIBS = -lpcap
 DESTDIR ?= /usr/local
 
