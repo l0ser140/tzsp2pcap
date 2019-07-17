@@ -1,0 +1,13 @@
+[Unit]
+Description=tzsp2pcap - Simple live TaZmen Sniffer Protocol (TZSP) to pcap converter
+After=network-online.target multi-user.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/bin/tzsp2pcap -o '/tcpdumps/file_%%Y-%%m-%%d_%%H-%%M-%%S.pcap' -G 14400 -z gzip
+User=tzsp2pcap
+KillSignal=SIGKILL
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
